@@ -1,1 +1,3 @@
 # Mission-to-Mars
+## The purpose of this repository is to explore making an app to display data scraped from the web about Mars.  
+#### This assignment involved scraping 4 pictures of the mars hemispheres with the titles and passing them to the app.  HTML was created and used bootstrap to format the app.  I added some additional bootstrap items such as changing the button color and Jumbotron background color.  Also made the featured image smaller and table bigger so it looked better.  I also added some highlighting and changed some of the header sizes.  I also adjusted the images to be "responsive" to the use on smaller devices. 
