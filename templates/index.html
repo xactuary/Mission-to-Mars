@@ -54,18 +54,69 @@
         </div>
       </div>
 ​
-      <!-- Section for Mars Hemispheres -->
+
+      <!-- Section for Hemisphere Image and Title -->
+      <div class="container-fluid">
+        <div class="row">       
+        <div class="col-md-12">
+          <div class="text-center" id="mars-hemispheres">
+          <h2><strong>MARS Hemispheres</h2></strong>
+        <!-- if images is False/None/non-existent, then default to error message -->
+          {% for hemisphere in mars.hemispheres %} <div class="col-md-3">
+          <img 
+            src="{{hemisphere.img_url}}"
+            class="mx-auto d-block" style="width: 150px"
+            class="img-responsive"
+            alt="Responsive image"
+          >
+          <strong><h4>{{ hemisphere.title }}</h4></strong>
+          </div>
+          {% endfor %}
+          />
+        </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+      <!-- Section for Mars Hemispheres 
       <div class="row" id="mars-hemispheres">
         <div class="page-header">
           <h2 class="text-center">Mars Hemispheres</h2>
         </div>
-​
-        {% for hemisphere in mars.hemispheres %}
+​           <p>{{mars.hemispheres}}</p>
+            <div>
+            {% for hemisphere in mars.hemispheres %}
+            <div class="col-md-3">
+              <div class="thumbnail">
+                <img src="{{hemisphere.img_url | default('static/images/error.png', true)}}" alt="...">
+                <div class="caption">
+                  <h3>{{hemisphere.title}}</h3>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+          </div>
+        </div> -->
+  </body>
+</html>
+
+ <!--       {% for hemisphere in mars.hemispheres %}  
         <div class="col-md-6">
           <div class="thumbnail">
+            {% for img_url in hemisphere %}
             <img src="{{hemisphere.img_url | default('static/images/error.png', true)}}" alt="...">
-            <div class="caption">
+            {% endfor %}
+
+              <div class="caption">
+              {% for title in hemisphere %}
               <h3>{{hemisphere.title}}</h3>
+              {% endfor %}
             </div>
           </div>
         </div>
@@ -73,4 +124,4 @@
       </div>
     </div>
   </body>
-</html>
+</html>-->
